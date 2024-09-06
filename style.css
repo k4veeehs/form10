@@ -4,8 +4,8 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: "Genshin Impact"; */
-    font-family: "SUSE", sans-serif;
+    font-family: "Genshin Impact";
+    /* font-family: "SUSE", sans-serif; */
     box-sizing: border-box;
     cursor: url("Genshin_Mouse_Cursor_32px.png"), auto;
 }
