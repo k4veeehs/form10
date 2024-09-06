@@ -1,0 +1,348 @@
+@import url("/genshin-impact.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Genshin Impact";
+    box-sizing: border-box;
+    cursor: url("Genshin_Mouse_Cursor_32px.png"), auto;
+}
+
+.nav {
+    margin: 0 auto 0;
+    list-style: none;
+    display: table;
+    text-align: center;
+}
+
+.nav li {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+}
+
+.nav-link {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.nav-link::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-link:hover::after,
+footer .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.link-active {
+    color: brown;
+}
+
+.top-subject,
+.more-detail {
+    padding-left: 1rem;
+}
+
+.subject {
+    font-size: 1.5rem;
+    padding: 1rem 0 0 1rem;
+}
+
+.detail {
+    padding: .5rem 0 0 1rem;
+    color: gray;
+}
+
+.all-card {
+    display: flex;
+    padding-bottom: 1rem;
+    /* for spacing "View All" */
+}
+
+.card {
+    padding: 1rem 0 0 1rem;
+}
+
+.card-content {
+    background-color: darkslategray;
+    color: #fff;
+    padding: 1rem;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+}
+
+.card-title,
+footer .title {
+    font-size: 1.5rem;
+}
+
+.card-lesson,
+.date {
+    padding-top: .5rem;
+}
+
+.date {
+    padding-bottom: 1rem;
+}
+
+.btn-check {
+    background: #fff;
+    border: none;
+    font-size: 1rem;
+    padding: .7rem;
+    border: #fff;
+    border-radius: 10px;
+}
+
+.check {
+    text-decoration: none;
+    color: #000;
+    transition: .2s;
+}
+
+.check:hover,
+.all-top-subject:hover {
+    color: brown;
+    transition: .2s;
+}
+
+.all-top-subject {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    color: gray;
+    transition: .2s;
+}
+
+/*
+.shoku-shop .shop-card {
+    color: #000;
+    padding: 1rem;
+    width: 30%;
+    text-align: center;
+}
+*/
+
+footer {
+    padding: 1.5rem 0 0 2rem;
+    background-color: darkslategray;
+    margin-top: 2rem;
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+.all-pages {
+    display: flex;
+    gap: 5rem;
+}
+
+.all-foot-nav-link {
+    list-style: none;
+    padding-top: .5rem;
+}
+
+.foot-nav-link {
+    text-decoration: none;
+    color: rgb(190, 189, 189);
+    line-height: 2;
+    transition: .2s;
+}
+
+.foot-nav-link:hover {
+    color: #fff;
+    transition: .2s;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.copyright .card-title {
+    font-size: 1rem;
+}
+
+.copyright .detail {
+    color: #fff;
+}
+
+.conditions {
+    padding-left: 3rem;
+    line-height: 1.5;
+}
+
+.more-detail {
+    line-height: 1.5;
+}
+
+#quadratic-form {
+    display: flex;
+    padding-left: 1rem;
+    line-height: 2;
+    padding-top: 1rem;
+    gap: 1.5rem;
+}
+
+#quadratic-form input {
+    text-align: center;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 1rem;
+}
+
+.solve {
+    padding: .7rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 764px;
+    background-color: darkslategray;
+    border: none;
+    color: #fff;
+    transition: .2s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.solve:hover {
+    background-color: brown;
+    transition: .2s;
+    cursor: url("Genshin_Mouse_Cursor_32px.png"), auto;
+}
+
+#result {
+    margin-left: 1rem;
+    width: 764px;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    border-radius: 10px;
+}
+
+.formulas .back {
+    text-decoration: none;
+    transition: .2s;
+}
+
+.formulas .back:hover {
+    color: brown;
+    transition: .2s;
+}
+
+.number {
+    color: brown;
+}
+
+/* let's do responsive!!! */
+@media screen and (max-width: 414px) {
+    .nav {
+        display: none;
+    }
+
+    .top-subject {
+        padding-left: 0;
+    }
+
+    .subject {
+        font-size: 1.25rem;
+    }
+
+    .all-card {
+        display: flex;
+        flex-direction: column;
+        padding-right: 1rem;
+    }
+
+    .card-content {
+        width: auto;
+    }
+
+    .btn-check {
+        width: 100%;
+    }
+
+    .check {
+        width: auto;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        padding-left: 1rem;
+    }
+
+    .all-pages {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .copyright .detail {
+        text-align: left;
+    }
+
+    .copyright img {
+        width: 150px;
+        text-align: left;
+    }
+
+    .copyright .c-form {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .formulas .back {
+        display: none;
+    }
+
+    .formulas {
+        width: 100%;
+        padding-right: 1rem;
+    }
+
+    .formulas img {
+        width: 400px;
+    }
+
+    #quadratic-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        line-height: 1;
+    }
+
+    #quadratic-form input {
+        width: auto;
+        height: 30px;
+    }
+
+    .btn-solve {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #result {
+        width: auto;
+        line-height: 1.5;
+    }
+}
