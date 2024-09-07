@@ -10,6 +10,20 @@
     cursor: url("Genshin_Mouse_Cursor_32px.png"), auto;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #d1e5ff;
+    border: 1px solid gray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkslategray;
+    border-radius: 20px;
+}
+
 .nav {
     margin: 0 auto 0;
     list-style: none;
@@ -133,6 +147,10 @@ footer .title {
     transition: .2s;
 }
 
+.sec-2 .formulas {
+    padding-right: 1rem;
+}
+
 /*
 .shoku-shop .shop-card {
     color: #000;
@@ -194,12 +212,29 @@ footer {
     line-height: 1.5;
 }
 
+.mul-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.sec-1 {
+    width: 50%;
+}
+
 #quadratic-form {
     display: flex;
     padding-left: 1rem;
     line-height: 2;
     padding-top: 1rem;
-    gap: 1.5rem;
+    gap: .67rem;
+}
+
+#calculator-form {
+    display: flex;
+    padding-left: 1rem;
+    line-height: 2;
+    padding-top: 1rem;
+    gap: .65rem;
 }
 
 #quadratic-form input {
@@ -210,11 +245,19 @@ footer {
     font-size: 1rem;
 }
 
+#calculator-form input {
+    width: 190.25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 1rem;
+}
+
 .solve {
     padding: .7rem;
     margin-left: 1rem;
     margin-top: 1rem;
-    width: 764px;
+    width: 100%;
     background-color: darkslategray;
     border: none;
     color: #fff;
@@ -229,8 +272,10 @@ footer {
     cursor: url("Genshin_Mouse_Cursor_32px.png"), auto;
 }
 
-#result {
+#result,
+#result1 {
     margin-left: 1rem;
+    padding-right: 3rem;
     width: 764px;
     text-align: center;
     padding-top: 1rem;
@@ -270,6 +315,10 @@ footer {
         display: flex;
         flex-direction: column;
         padding-right: 1rem;
+    }
+
+    .formulas .all-card {
+        padding-right: 0;
     }
 
     .card-content {
@@ -312,6 +361,10 @@ footer {
         padding-left: 0;
     }
 
+    .sec-1 {
+        width: 100%;
+    }
+
     .formulas .back {
         display: none;
     }
@@ -321,18 +374,25 @@ footer {
         padding-right: 1rem;
     }
 
-    .formulas img {
-        width: 400px;
+    .img1 {
+        width: 100%;
     }
 
-    #quadratic-form {
+    .img2 {
+        width: 70%;
+        padding-left: 1rem;
+    }
+
+    #quadratic-form,
+    #calculator-form {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         line-height: 1;
     }
 
-    #quadratic-form input {
+    #quadratic-form input,
+    #calculator-form input {
         width: auto;
         height: 30px;
     }
@@ -343,8 +403,16 @@ footer {
         align-items: center;
     }
 
-    #result {
+    #result,
+    #result1 {
         width: auto;
+        padding-right: 0;
         line-height: 1.5;
+        text-align: center;
+    }
+
+    .mul-section {
+        display: flex;
+        flex-direction: column;
     }
 }

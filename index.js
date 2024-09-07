@@ -24,3 +24,28 @@ function solveQuadratic() {
 
     document.getElementById('result').innerHTML = result;
 }
+
+// --------------------------------------------------------------------------------------
+
+function calculateConcentration() {
+    const moles = parseFloat(document.getElementById('moles').value);
+    const volume = parseFloat(document.getElementById('volume').value);
+    const molarity = parseFloat(document.getElementById('molarity').value);
+
+    let resultText = '';
+
+    if (!isNaN(moles) && !isNaN(volume) && isNaN(molarity)) {
+        const calculatedMolarity = moles / volume;
+        resultText = `Molarity: <span class="number">${calculatedMolarity.toFixed(2)}</span> M`;
+    } else if (!isNaN(moles) && isNaN(volume) && !isNaN(molarity)) {
+        const calculatedVolume = moles / molarity;
+        resultText = `Volume: <span class="number">${calculatedVolume.toFixed(2)}</span> L`;
+    } else if (isNaN(moles) && !isNaN(volume) && !isNaN(molarity)) {
+        const calculatedMoles = molarity * volume;
+        resultText = `Moles of Solute: <span class="number">${calculatedMoles.toFixed(2)}</span> mol`;
+    } else {
+        resultText = 'Please provide exactly two values to calculate the third.';
+    }
+
+    document.getElementById('result1').innerHTML = resultText;
+}

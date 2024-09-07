@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulas | FORM 10</title>
+    <title>Quadratic Equation Solver | FORM 10</title>
     <link rel="icon" href="FORM_Off_RemoveBg_WhiteText.png">
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,50 +27,68 @@
             <a href="#" class="nav-link">Languages</a>
         </li>
     </ul>
-    <!--
-    <section class="top-subject shoku-shop">
-        <p class="subject">Shop</p>
-        <p class="detail">Go Shopping at Shoku Shop</p>
-        <div class="all-card">
-            <div class="card">
-                <div class="shop-card">
-                    <img src="https://theenglishbookshop.com/cdn/shop/products/Untitleddesign-2022-07-25T101207.835.png?v=1658733142"
-                        alt="math-book" width="80%">
-                    <p class="card-lesson">The Big Fat Middle School Math Workbook</p>
+    <div class="mul-section">
+        <section class="sec-1">
+            <section class="top-subject formulas">
+                <a href="formulas.html" class="detail back">
+                    < Back</a>
+                        <p class="subject">Quadratic Equation Solver</p>
+                        <p class="detail">A Quadratic Equation Solver is a tool that finds the roots of a quadratic
+                            equation of
+                            the form
+                            (ax<sup>2</sup> + bx + c = 0)</p>
+                        <img src="png-clipart-quadratic-equation-quadratic-formula-quadratic-function-formula-s-angle-text-removebg-preview.png"
+                            alt="QuadraticEquation" width="80%" class="img1">
+                        <p class="more-detail">The discriminant (b<sup>2</sup> - 4ac) determines the nature of the
+                            roots:</p>
+                        <ul class="more-detail conditions">
+                            <li>Two distinct real roots if the discriminant is positive.</li>
+                            <li>One real root if the discriminant is zero.</li>
+                            <li>No real roots (complex roots) if the discriminant is negative.</li>
+                        </ul>
+            </section>
+            <section class="top-subject formulas">
+                <p class="subject">Input Your Numbers</p>
+                <p class="detail">Please input a, b, and c</p>
+                <form id="quadratic-form">
+                    <label for="a">a:</label>
+                    <input type="text" id="a" name="a" required>
+                    <label for="b">b:</label>
+                    <input type="text" id="b" name="b" required>
+                    <label for="c">c:</label>
+                    <input type="text" id="c" name="c" required>
+                </form>
+                <div class="btn-solve">
+                    <button type="button" onclick="solveQuadratic()" class="solve">Solve</button>
                 </div>
-            </div>
-        </div>
-    </section>
--->
-    <section class="top-subject formulas">
-        <p class="subject">All Formulas</p>
-        <p class="detail">Solve the equation by using formulas</p>
-        <div class="all-card">
-            <div class="card">
-                <div class="card-content">
-                    <p class="card-title">Mathematics</p>
-                    <p class="card-lesson">Quadratic Equation Solver</p>
-                    <p class="date">Date Added: 2024/11/05</p>
-                    <button class="btn-check"><a href="QuadraticEquationSolver.html" class="check">View</a></button>
+                <div id="result"></div>
+            </section>
+        </section>
+        <section class="sec-2">
+            <section class="top-subject formulas">
+                <p class="subject">Other Formulas</p>
+                <p class="detail">Find more other formulas to solve</p>
+                <div class="all-card">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="card-title">Mathematics</p>
+                            <p class="card-lesson">Combinations in Probability</p>
+                            <p class="date">Date Added: 2024/11/05</p>
+                            <button class="btn-check"><a href="#" class="check">Coming Soon</a></button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="card-title">Science: Chemistry</p>
+                            <p class="card-lesson">Comprehensive Concentration Calculator</p>
+                            <p class="date">Date Added: 2024/09/07</p>
+                            <button class="btn-check"><a href="MolarConcentration.html" class="check">View</a></button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <p class="card-title">Science: Chemistry</p>
-                    <p class="card-lesson">Comprehensive Concentration Calculator</p>
-                    <p class="date">Date Added: 2024/11/05</p>
-                    <button class="btn-check"><a href="MolarConcentration.html" class="check">View</a></button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <p class="card-title">Mathematics</p>
-                    <p class="card-lesson">Combinations in Probability</p>
-                    <p class="date">Date Added: 2024/11/05</p>
-                    <button class="btn-check"><a href="#" class="check">Coming Soon</a></button>
-                </div>
-        </div>
-    </section>
+            </section>
+        </section>
+    </div>
     <footer>
         <div class="all-pages">
             <div class="page-a">
@@ -144,4 +162,5 @@
             <p class="detail c-form">&copy; 2024 by FORM</p>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
